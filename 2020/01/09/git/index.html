@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>git | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="版本控制（git） 版本控制软件大致分为： 本地，集中式(SVN)，分布式版本控制系统(git)。  git工作原理 git的三个区域及三种状态  modified：工作目录是对项目的某个版本独立提取出来的内容，这些从git压缩数据库中提取出来的文件，放在磁盘上供你使用或修改。 staged：暂存区域是一个文件，保存了下次将提交的文件列表信息，一般在git仓库目录中。有时也被称为索引，不过一般还是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git">
+<meta property="og:url" content="http://yoursite.com/2020/01/09/git/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="版本控制（git） 版本控制软件大致分为： 本地，集中式(SVN)，分布式版本控制系统(git)。  git工作原理 git的三个区域及三种状态  modified：工作目录是对项目的某个版本独立提取出来的内容，这些从git压缩数据库中提取出来的文件，放在磁盘上供你使用或修改。 staged：暂存区域是一个文件，保存了下次将提交的文件列表信息，一般在git仓库目录中。有时也被称为索引，不过一般还是">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-01-09T03:50:27.761Z">
+<meta property="article:modified_time" content="2020-01-09T03:50:27.761Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/blog-test/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog-test/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog-test/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog-test/">Home</a>
+        
+          <a class="main-nav-link" href="/blog-test/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog-test/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-git" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog-test/2020/01/09/git/" class="article-date">
+  <time datetime="2020-01-09T03:50:27.761Z" itemprop="datePublished">2020-01-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      git
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="版本控制（git）"><a href="#版本控制（git）" class="headerlink" title="版本控制（git）"></a>版本控制（git）</h2><blockquote>
+<p>版本控制软件大致分为： 本地，集中式(SVN)，分布式版本控制系统(git)。</p>
+</blockquote>
+<h3 id="git工作原理"><a href="#git工作原理" class="headerlink" title="git工作原理"></a>git工作原理</h3><ul>
+<li><p>git的三个区域及三种状态</p>
+<ul>
+<li>modified：工作目录是对项目的某个版本独立提取出来的内容，这些从git压缩数据库中提取出来的文件，放在磁盘上供你使用或修改。</li>
+<li>staged：暂存区域是一个文件，保存了下次将提交的文件列表信息，一般在git仓库目录中。有时也被称为索引，不过一般还是叫暂存区域。</li>
+<li>committed：git仓库是git用来保存项目的元数据和对象数据库的地方，是git最重要的部分。</li>
+</ul>
+</li>
+<li><p>git的基本指令</p>
+<ol>
+<li>git init : 创建了一个.git 目录（仓库）</li>
+<li>git config –global user.name / user.email  配置用户信息。–list  以列表形式查看信息</li>
+<li>git status: 查看仓库状态</li>
+<li>git add :将文件放入暂存区       ./*/-A   把所有文件放入暂存区</li>
+<li>git checkout 文件名 :  可以丢弃工作区的修改 </li>
+<li>git reset HEAD file  可以把暂存区的修改撤销掉 </li>
+<li>git commit -m ‘标记’ ： 将暂存区内容放到仓库永久存储</li>
+<li>git log ： 查看当前版本日志</li>
+<li>git reset –hard 提交ID : 可以把特定ID的版本还原到本地</li>
+<li>git commit –amend   可以修改最后一次的提交日志</li>
+<li>git reflow 查看操作历史</li>
+<li>git diff HEAD – readme.txt   可以查看工作区和版本库里面最新版本的区别 </li>
+<li>git rm  用于删除一个文件 </li>
+<li>git stash  可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作 </li>
+<li>git stash pop  恢复的同时把stash内容也删了 </li>
+<li>git  cherry-pick 4c805e2  复制一个特定的提交到当前分支 </li>
+</ol>
+</li>
+<li><p>git 分支</p>
+<ul>
+<li>至少要commit一次才会创建一个分支；分支有继承，新创建的会继承父分支的所有提交历史</li>
+<li>git  branch  分支名  创建新分支</li>
+<li>git  branch  显示所有分支</li>
+<li>git  checkout  分支名    切换分支</li>
+<li>git  checkout  -b  分知名   创建并切换到新分支</li>
+<li>git checkout -b dev origin/dev  创建远程<code>origin</code>的<code>dev</code>分支到本地 </li>
+<li>git  merge  分支名  合并分支</li>
+<li>git  branch  -d/-D   分支名   删除分支</li>
+</ul>
+</li>
+</ul>
+<h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><h3 id="远程仓库的创建条件"><a href="#远程仓库的创建条件" class="headerlink" title="远程仓库的创建条件"></a>远程仓库的创建条件</h3><blockquote>
+<ol>
+<li>创建一个xxx.git的文件夹</li>
+<li>创建一个裸仓库（git   init –bare）</li>
+</ol>
+</blockquote>
+<h3 id="远程仓库的指令"><a href="#远程仓库的指令" class="headerlink" title="远程仓库的指令"></a>远程仓库的指令</h3><blockquote>
+<ol>
+<li>git    push    远程仓库地址        master        把master放到远程仓库</li>
+<li>git    pull        远程仓库地址          master       把远程仓库的master分支pull过来</li>
+<li>git    remote  add   别名   地址     给远程仓库创建一个别名</li>
+<li>git    clone    远程仓库地址  自己的文件夹     把远程仓库直接拷贝到相应的文件夹中</li>
+<li>添加别名后可以通过 git  remote  查看所有别名</li>
+<li>clone过来的文件夹操作仓库时默认有个别名  origin</li>
+<li>git   remote show   origin  显示远程地址的详细信息</li>
+<li>拉取过程出错 ： git pull –rebase  别名   分支名</li>
+</ol>
+</blockquote>
+<p><code>本地生成SSH密钥指令        ssh-keygen  -t  rsa</code></p>
+<h2 id="bash指令"><a href="#bash指令" class="headerlink" title="bash指令"></a>bash指令</h2><ul>
+<li>pwd    查看当前目录</li>
+<li>ls   -a   -l   以列表形式查看文件夹下的所有文件</li>
+<li>touch    创建一个文件(touch   index.html)</li>
+<li>cat    查看文件中的所有内容</li>
+<li>more/less   查看文件       q:  退出</li>
+<li>rm   删除文件         rm  -r   js/   循环删除文件夹下的所有文件</li>
+<li>rmdir    删除空文件夹</li>
+<li>mv    移动/重命名文件</li>
+<li>cp     复制同时也可以修改文件名</li>
+<li>head  -5   a.txt /    tail   -5    a.txt   查看文件前5行或后5行内容</li>
+<li>history  查看操作历史</li>
+<li>‘&gt; ‘  和  &gt;&gt; 重定向    &gt;  覆盖原内容   &gt;&gt;在后面追加</li>
+<li>curl   网络请求    curl   <a href="http://baidu.com" target="_blank" rel="noopener">http://baidu.com</a></li>
+<li>whoami   查看当前用户</li>
+<li>ls   |   grep   s    把ls的输出作为grep的输入.grep后面跟的是正则  然后是从那个文件/输入找</li>
+</ul>
+<h2 id="vi编辑器"><a href="#vi编辑器" class="headerlink" title="vi编辑器"></a>vi编辑器</h2><blockquote>
+<p>vi  文件名  进入命令行模式<code>再输入 i/a/A/o/O</code>  进入输入模式  <code>输入esc</code>  退回到命令行模式 <code>输入:</code>进入底部模式</p>
+</blockquote>
+<p>命令行模式指令:     </p>
+<p>ZZ     保存并退出        u    撤销操作        dd    删除当前行    yy复制当前行            p     粘贴</p>
+<p>ctrl+f    向下翻页                ctrl+b    向上翻页</p>
+<p>底行模式: </p>
+<p>w    保存     w    index.html 另存为一个文件        q    退出    wq    保存并退出</p>
+<p>e!    撤销更改返回到上一次        q!    不保存强制退出</p>
+<p>set    nu    设置行号</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/01/09/git/" data-id="ck5672l050000aboif7pr2rv7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/blog-test/2020/01/09/git%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">git常用快捷键</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog-test/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog-test/archives/2018/08/">August 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog-test/2020/01/09/git/">git</a>
+          </li>
+        
+          <li>
+            <a href="/blog-test/2020/01/09/git%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/">git常用快捷键</a>
+          </li>
+        
+          <li>
+            <a href="/blog-test/2018/08/08/hello-world/">你好啊</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog-test/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog-test/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/blog-test/fancybox/jquery.fancybox.css">
+
+  
+<script src="/blog-test/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/blog-test/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
